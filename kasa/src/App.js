@@ -4,6 +4,7 @@ import Banner from "./components/Banner"
 import ApartmentGrid from "./components/ApartmentGrid"
 import "./App.css"
 import Main from "./components/Main"
+import Footer from "./components/Footer";
 function App() {
   return <div>
     <Navbar />
@@ -11,6 +12,7 @@ function App() {
     <Banner/>
     <ApartmentGrid/>
     </Main>
+    <Footer/>
     </div>
 }
 export default App;
