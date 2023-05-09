@@ -1,10 +1,12 @@
 import React from "react";
 import "./Apartment.css"
+import { NavLink } from "react-router-dom";
 function Apartment() {
     return (
       <div className="apartment">
-          <div className="apartment_title"> titre de la location </div>  
-          
+        <NavLink to="/ApartementPage">
+          <div div className="apartment_title">   titre de la location   </div>
+          </NavLink>
       </div>
       
     );
