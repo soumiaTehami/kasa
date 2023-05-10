@@ -1,5 +1,5 @@
 import React from "react";
-import "./Apartment.css"
+import "./Apartment.scss"
 import { NavLink } from "react-router-dom";
 function Apartment() {
     return (

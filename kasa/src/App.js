@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner"
 import ApartmentGrid from "./components/ApartmentGrid"
-import "./App.css"
+import "./App.scss"
 import Main from "./components/Main"
 import Footer from "./components/Footer";
 function App() {

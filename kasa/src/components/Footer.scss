@@ -1,12 +1,13 @@
+@use "../scss/variable.scss" as*;
 .footer {
-  background-color: rgb(25, 25, 25);
+  background-color:$footer-background-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .footer_text {
-  color: white;
+  color:  $color-tertairy;
   font-size: 15px;
   margin-bottom: 1.5rem;
 }
