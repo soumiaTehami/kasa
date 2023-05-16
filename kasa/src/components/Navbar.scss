@@ -11,10 +11,10 @@
         color:  $color-primry;
     
     } 
-     &> *:first-child{
+     & > *:first-child{
         margin-right:auto;
     }
-    &a:hover{
+    & a:hover{
         text-decoration: underline;
     }
     & a.active{
