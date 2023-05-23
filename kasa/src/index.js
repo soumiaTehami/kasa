@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider,Outlet  } from "react-router-dom"
-import Footer from "./components//Footer";
-import Main from "./components//Main";
-import App from "./App";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
 import Navbar from "./components/Navbar";
+import HomePage from"./page/HomePage"
+import ApartementPage from './page/ApartementPage';
 const HeaderFooterLayout = () => {
   return (
     <>
@@ -25,7 +26,7 @@ export const router=createBrowserRouter([
     path:"/",
    element :(
   <>
-   <App/>
+   <HomePage/>
   
    </>
    ),
@@ -37,7 +38,7 @@ export const router=createBrowserRouter([
   },
   {
     path:"/ApartementPage",
-   element :<h1>nos Apartement</h1>,
+   element :<ApartementPage/>,
   },
   {
     path:"/Error",
