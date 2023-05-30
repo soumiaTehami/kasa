@@ -1,0 +1,32 @@
+@use "../scss/variable.scss" as*;
+.apartement-description{
+
+    p{
+        margin-block: 0;
+    }
+    
+    .description-title{
+        background-color:  $color-primry;
+        color:   $color-tertairy;
+        padding: 0.7rem ;
+        border-radius: 0.7rem;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        i{
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+    }
+    .description-content{
+        background-color:  $color-gray;
+        color:$color-primry ;
+        padding: 1rem;
+        border-radius:0.7rem;
+        position: relative;
+        top:-0.3rem;
+        z-index: -1;
+
+    }
+}

@@ -14,57 +14,9 @@
 
     }
     
-    img{
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-        margin-bottom: 1rem;
-        
-    }
-    .apartement-header{
-        .apartements-details{
-            display: flex;
-            gap:0.5rem
-        }
-        .apartement_badge{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            background-color: gray;
-        }
-        .apartement-star{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.2rem;
-            *{
-                font-size: 2rem;
-            }
-            .on{
-                color: $color-primry;
-            }
-            .off{
-                color: gray;
-            }
-
-        }
-        display: flex;
-        .apartement__title{
-            flex-grow: 1;
-        }
-        & > *{
-            border: 3px solid blue;
-        }
-        h3{
-            margin-block: 0;
-            display:flex;
-            flex-direction: column;
-            align-items:flex-end;
-            font-weight: 400;
-        }
-    margin-bottom: 20px;
-    }
+    
+    
+   
     .apartement-tags{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(100px,150px));
@@ -78,35 +30,9 @@
         }
         
     }
-    .apartement-description{
-        p{
-            margin-block: 0;
-        }
-        
-        .description-title{
-            background-color:  $color-primry;
-            color:   $color-tertairy;
-            padding: 0.7rem ;
-            border-radius: 0.7rem;
-            display: flex;
-            justify-content:space-between;
-            align-items: center;
-            i{
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-            
-        }
-        .description-content{
-            background-color:  $color-gray;
-            color:$color-primry ;
-            padding: 1rem;
-            border-radius:0.7rem;
-            position: relative;
-            top:-0.3rem;
-            z-index: -1;
-
-        }
-    }
+   .apartement_description{
+    display: flex;
+    gap: 10px;
+   }
 
 }

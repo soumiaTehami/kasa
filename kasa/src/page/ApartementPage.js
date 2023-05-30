@@ -1,56 +1,21 @@
 import React from "react";
 import "./ApartementPage.scss";
+import { Apartementdescription } from "../components/Apartementdescription.js"
+import { Apartementimage } from "../components/Apartementimage";
+import {ApartementHeader} from "../components/ApartementHeader"
 
 function ApartementPage() {
   return (
     <div>
       <div className="apartement-page">
-        <img src="page.jpg" alt="apartement page" className="apartement page" />
+        <Apartementimage/>
 
         <div>
-          <div className="apartement-header">
-            <div class="apartement__title">
-              <h1>Appartement cosy</h1>
-              <h2>Ile de France - Paris 17e</h2>
-              <div className="apartement-tags">
-                <span>Cosy</span>
-                <span>Canak</span>
-                <span>Paris10</span>
-              </div>
-            </div>
-            <div className="apartement-page-info-name">
-              <div className="apartements-details">
-              <h3>
-                <span>Alexandre</span>
-               <span>Dumas</span>
-              </h3>
-              <div className="apartement_badge"></div></div>
-              <div className="apartement-star">
-                <span className="on">★</span>
-                <span className="on">★</span>
-                <span className="on">★</span>
-                <span className="off">★</span>
-                <span className="off">★</span>
-              </div>
-              </div>
-            </div>
-            <div className="apartement-description">
-              <p className="description-title"><span>Description</span><i className="fa-solid fa-chevron-up"></i></p>
-              <p className="description-content"> 
-                Votre maison loin de chez vous. Que vous veniez de l'autre bout
-                du monde, ou juste de quelques stations de RER, vous vous
-                sentirez chez vous dans notre appartement.
-              </p>
-            </div>
-            <div className="apartement-description">
-              <p className="description-title"><span>Description</span><i className="fa-solid fa-chevron-up"></i></p>
-              <p className="description-content">
-                Votre maison loin de chez vous. Que vous veniez de l'autre bout
-                du monde, ou juste de quelques stations de RER, vous vous
-                sentirez chez vous dans notre appartement.
-              </p>
-            </div>
-          
+          <ApartementHeader/>
+          <div className="apartement_description">
+            <Apartementdescription />
+            <Apartementdescription />
+          </div>
         </div>
       </div>
       <div></div>
