@@ -6,6 +6,7 @@ import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import HomePage from"./page/HomePage"
 import ApartementPage from './page/ApartementPage';
+import About from './page/About'
 const HeaderFooterLayout = () => {
   return (
     <>
@@ -34,7 +35,7 @@ export const router=createBrowserRouter([
   },
   {
     path:"/About",
-   element :<h1>Apropos</h1>,
+   element :<About/>,
   },
   {
     path:"/ApartementPage",

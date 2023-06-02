@@ -1,4 +1,7 @@
 .main{
     padding-inline: 30px ;
     margin-bottom: 30px;
+    @media screen and (width<=768px){
+        padding:1rem;
+        }
 }
