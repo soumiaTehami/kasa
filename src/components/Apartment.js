@@ -1,15 +1,14 @@
 import React from "react";
-import "./Apartment.scss"
-import { NavLink } from "react-router-dom";
-function Apartment() {
-    return (
-      <div className="apartment">
-        <NavLink to="/ApartementPage">
-          <div div className="apartment_title">   titre de la location   </div>
-          </NavLink>
+import "./Apartment.scss";
+function Apartment(props) {
+  return (
+    <div className="apartment">
+      <img src="https://picsum.photos/200/300" alt="" />
+      <div div className="apartment_title">
+      {props.title}
       </div>
-      
-    );
-  }
+    </div>
+  );
+}
 
 export default Apartment;

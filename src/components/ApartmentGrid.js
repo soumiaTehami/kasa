@@ -1,13 +1,27 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Apartment from "./Apartment"
 import "./ApartmentGrid.scss"
+
 function ApartmentGrid() {
+    const [apartments, setApartments] = useState([]);
+    useEffect(FetchApartements,[])
+    function FetchApartements(){
+      fetch("logements.json")
+        .then((res) => res.json())
+        .then((res) => setApartments(res))
+        .catch(console.error);
+  
+    }
     return (
       <div className="grid" >
-          <Apartment/>
-          <Apartment/>
-          <Apartment/>  
-          <Apartment/>
+        
+        {apartments.map((apartment) => (
+        <Apartment
+          title={apartment.title}
+         
+        />
+      ))}
+          
       </div>
       
     );
