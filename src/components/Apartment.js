@@ -1,14 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Apartment.scss";
 function Apartment(props) {
-  return (
-    <div className="apartment">
-      <img src="https://picsum.photos/200/300" alt="" />
-      <div div className="apartment_title">
-      {props.title}
-      </div>
-    </div>
-  );
-}
+
+    return (
+      <Link to="/ApartementPage" className="apartment">
+        <div className="apartment_image">
+          <img src={props.imageUrl} alt="" />
+        </div>
+        <div className="apartment_title">
+          {props.title}
+        </div>
+      </Link>
+    );
+  }
 
 export default Apartment;

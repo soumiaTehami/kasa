@@ -18,6 +18,7 @@ function ApartmentGrid() {
         {apartments.map((apartment) => (
         <Apartment
           title={apartment.title}
+          imageUrl={apartment.cover}
          
         />
       ))}
