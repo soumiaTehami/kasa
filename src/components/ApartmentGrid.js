@@ -19,6 +19,7 @@ function ApartmentGrid() {
         <Apartment
           title={apartment.title}
           imageUrl={apartment.cover}
+          id={apartment.id}
          
         />
       ))}
