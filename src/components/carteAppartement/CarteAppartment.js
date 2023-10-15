@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Apartment.scss";
-function Apartment(props) {
+import "./CarteAppartment.scss";
+function CarteAppartement(props) {
   return (
     <Link
-      to="/ApartementPage"
+      to={`/ApartementPage/${props.id}`}
       state={{
         apartmentId: props.id,
       }}
@@ -18,4 +18,4 @@ function Apartment(props) {
   );
 }
 
-export default Apartment;
+export default CarteAppartement;

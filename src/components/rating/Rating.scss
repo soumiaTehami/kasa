@@ -1,4 +1,4 @@
-@use "../scss/variable.scss" as*;
+@use "../../scss/variable.scss" as*;
 .apartement-header{
     .apartements-details{
         display: flex;
@@ -39,7 +39,7 @@
         margin-block: 0;
         display:flex;
         flex-direction: column;
-        align-items:flex-end;
+
         font-weight: 400;
     }
     .apartement-page-info-name{
