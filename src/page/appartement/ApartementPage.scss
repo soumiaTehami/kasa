@@ -32,6 +32,7 @@
     }
    .apartement_description{
     display: flex;
+    overflow: hidden;
     gap: 10px;
     @media screen and (width<=768px){
         flex-direction:column;}
