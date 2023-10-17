@@ -1,5 +1,7 @@
 @use "../../scss/variable.scss" as*;
 .apartement-description{
+    flex: 1;
+    overflow: hidden;
     margin-bottom: 1rem;
 
     p{
@@ -21,8 +23,10 @@
         
     }
     .description-content{
+        
         background-color:  $color-gray;
         color:$color-primry ;
+        
         padding: 1rem;
         border-radius:0.7rem;
         position: relative;

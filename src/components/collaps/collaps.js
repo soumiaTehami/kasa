@@ -8,7 +8,6 @@ export function Collaps() {
     setIsContentVisible(!isContentVisible);
   };
 
-  //const contentClass = (isContentVisible ? "visible" : "hidden") + " description__content";
   const chevronClass =
     (isContentVisible ? "fa-chevron-up" : "fa-chevron-down") + " fas";
 
