@@ -1,12 +1,12 @@
 import React from "react";
 import "./About.scss";
-import  {Slider} from "../../components/slider/slider";
+import Banner from "../../components/banner/Banner";
 import { Collaps } from "../../components/collaps/collaps.js";
 
 function About() {
   return (
     <>
-        <Slider />
+        <Banner/>
       <div className="about-container">
         <Collaps />
         <Collaps />

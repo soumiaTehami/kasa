@@ -1,4 +1,5 @@
-import React from "react";
+import React,{ useEffect, useState} from "react";
+
 import "./ApartementPage.scss";
 import { Collaps } from "../../components/collaps/collaps.js";
 import { Slider } from "../../components/slider/slider";
@@ -9,6 +10,24 @@ function ApartementPage() {
   const { id } = useParams();
 
   console.log(id);
+  const [logement, setLogement] = useState(null);
+  
+  useEffect(() =>
+    
+    fetch("logements.json")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setLogement ( data.find(
+            (element) => element.id === id
+          ))
+      
+        })
+    
+   },[id]);
+
+console.log(logement)
+
 
   return (
     <div>
