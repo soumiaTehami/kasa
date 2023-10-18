@@ -1,11 +1,11 @@
 import React from "react";
 import "./slider.scss";
 
-export function Slider() {
+export function Slider(props) {
   return (
     <div className="apartement_image">
       <img
-        src="../bannerAbout-kasa.webp"
+        src={props.imageUrl}
         alt="apartement page"
         className="apartement page"
       />

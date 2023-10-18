@@ -29,7 +29,7 @@ function ApartementPage() {
   return (
     <div>
       <div className="apartement-page">
-        <Slider />
+        <Slider imageUrl={logement.cover}/>
         <div>
           <Rating />
           <div className="apartement_description">
