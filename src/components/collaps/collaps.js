@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./collaps.scss";
 
-export function Collaps() {
+export function Collaps(props) {
   const [isContentVisible, setIsContentVisible] = useState(false);
 
   const showContent = () => {
@@ -15,13 +15,11 @@ export function Collaps() {
     <>
       <div className="apartement-description">
         <p className="description-title" onClick={showContent}>
-          <span>Description</span>
+          <span>{props.title}</span>
           <i className={chevronClass}></i>
         </p>
       {isContentVisible && <p className="description-content">
-          Votre maison loin de chez vous. Que vous veniez de l'autre bout du
-          monde, ou juste de quelques stations de RER, vous vous sentirez chez
-          vous dans notre appartement.
+          {props.content}
         </p>}  
       </div>
     </>

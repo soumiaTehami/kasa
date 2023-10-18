@@ -2,7 +2,7 @@ import React from "react";
 import "./Rating.scss";
 
 export function Rating(props) {
-  const logement=props.logement;
+  const {logement}=props;
   const { name } = logement.host;
   const [firstName, lastName] = name.split(" ");
   return (

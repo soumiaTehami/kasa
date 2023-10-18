@@ -34,8 +34,10 @@ function ApartementPage() {
           <Rating logement={logement} />
 
           <div className="apartement_description">
-            <Collaps />
-            <Collaps />
+            <Collaps title="Description" content={logement.description} />
+            <Collaps title="Equipements"  content={logement.equipments.map((equipment, i) => (
+            <li key={i}>{equipment}</li>
+          ))}/>
           </div>
         </div>
       </div>
