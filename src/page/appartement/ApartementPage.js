@@ -31,7 +31,8 @@ function ApartementPage() {
       <div className="apartement-page">
         <Slider imageUrl={logement.cover}/>
         <div>
-          <Rating />
+          <Rating logement={logement} />
+
           <div className="apartement_description">
             <Collaps />
             <Collaps />

@@ -1,32 +1,35 @@
 import React from "react";
 import "./Rating.scss";
 
-export function Rating() {
+export function Rating(props) {
+  const logement=props.logement;
+  const { name } = logement.host;
+  const [firstName, lastName] = name.split(" ");
   return (
     <div className="apartement-header">
       <div class="apartement__title">
-        <h1>Appartement cosy</h1>
-        <h2>Ile de France - Paris 17e</h2>
+        <h1>{logement.title}</h1>
+        <h2>{logement.location}</h2>
         <div className="apartement-tags">
-          <span>Cosy</span>
-          <span>Canak</span>
-          <span>Paris10</span>
+        {logement.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
         </div>
       </div>
       <div className="apartement-page-info-name">
         <div className="apartements-details">
           <h3>
-            <span>Alexandre</span>
-            <span>Dumas</span>
+            <span>{firstName}</span>
+            <span>{lastName}</span>
           </h3>
-          <div className="apartement_badge"></div>
+          <div className="apartement_badge"><img src={logement.host.picture} alt="" /></div>
         </div>
         <div className="apartement-star">
-          <span className="on">★</span>
-          <span className="on">★</span>
-          <span className="on">★</span>
-          <span className="off">★</span>
-          <span className="off">★</span>
+        {[1, 2, 3, 4, 5].map((etoile) => (
+            <span key={etoile} className={logement.rating >= etoile ? "on" : ""}>
+              ★
+            </span>
+          ))}
         </div>
       </div>
     </div>
