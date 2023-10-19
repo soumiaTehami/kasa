@@ -9,6 +9,14 @@ export function Slider(props) {
         alt="apartement page"
         className="apartement page"
       />
+       <>
+          <button className="btn btn-précédent">
+            <i className="fas fa-chevron-left"></i>
+            </button>
+            <button className="btn btn-suivant" >
+            <i className="fas fa-chevron-right"></i>
+          </button>
+     </>
     </div>
   );
 }

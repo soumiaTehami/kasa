@@ -1,5 +1,25 @@
+@use "../../scss/variable.scss" as*;
 .apartement_image{
+    position: relative;
     margin-bottom: 2rem;
+    .btn {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 5rem;
+        background-color: transparent;
+        color: $color-tertairy;
+        font-size: 3rem;
+        cursor: pointer;
+        border-width: 0;
+        
+        &.btn-suivant {
+          right: 0;
+        }
+        &.btn-précédent{
+          left: 0;
+        }
+      }
     img{
         height: 200px;
         width: 100%;
