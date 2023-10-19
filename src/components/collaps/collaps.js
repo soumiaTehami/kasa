@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import "./collaps.scss";
 
 export function Collaps(props) {
-  const [isContentVisible, setIsContentVisible] = useState(false);
+  const [ContentVisible, setContentVisible] = useState(false);
 
-  const showContent = () => {
-    setIsContentVisible(!isContentVisible);
+  const Contentchevron = () => {
+    setContentVisible(!ContentVisible);
   };
 
   const chevronClass =
-    (isContentVisible ? "fa-chevron-up" : "fa-chevron-down") + " fas";
+    (ContentVisible ? "fa-chevron-up" : "fa-chevron-down") + " fas";
 
   return (
     <>
       <div className="apartement-description">
-        <p className="description-title" onClick={showContent}>
+        <p className="description-title" onClick={Contentchevron}>
           <span>{props.title}</span>
           <i className={chevronClass}></i>
         </p>
-      {isContentVisible && <p className="description-content">
+      {ContentVisible && <p className="description-content">
           {props.content}
         </p>}  
       </div>
