@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/footer/Footer";
-
 import Navbar from "./components/header/Navbar";
 import HomePage from "./page/home/HomePage";
 import ErrorPage from "./page/notFound/ErrorPage";

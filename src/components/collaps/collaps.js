@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./collaps.scss";
 
 export function Collaps(props) {
-  const [ContentVisible, setContentVisible] = useState(false);
+  const [ContentVisible, setContentVisible] = useState(false);//défini le collapse par défaut fermé
 
   const Contentchevron = () => {
-    setContentVisible(!ContentVisible);
+    setContentVisible(!ContentVisible);//inversé la valeur actuale
   };
 
   const chevronClass =

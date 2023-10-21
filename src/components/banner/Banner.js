@@ -8,8 +8,6 @@ export default function Banner() {
   if (window.location.pathname==="/About"){
     text="";
     src="../bannerAbout-kasa.webp"
-    
-
     }
   
   return (

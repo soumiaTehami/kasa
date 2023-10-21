@@ -1,3 +1,17 @@
+# P7-Kasa
+
+Projet n°7 de la formation Developpeur Web OPENCLASSROOMS
+## Contexte
+
+Kasa me recrute en tant que développeur front-end en freelance pour développer sa nouvelle plateforme web. Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant.
+
+## Objectif 
+
+Démarrer le projet React et développer l’ensemble de l’application, les composants React, les routes React Router
+
+## Langages utilisés :
+HTML5 / SASS / JavaScript / React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
