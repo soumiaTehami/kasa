@@ -2,7 +2,7 @@ import React from "react";
 import "./Banner.scss";
 
 export default function Banner() {
-  console.log(window.location.pathname);
+  //console.log(window.location.pathname);
   let text="Chez vous, partout et ailleurs";
   let src="bannerHome-kasa.webp";
   if (window.location.pathname==="/About"){

@@ -11,7 +11,7 @@ function CarteAppartement(props) {
       className="apartment"
     >
       <div className="apartment_image">
-        <img src={props.imageUrl} alt="" />
+        <img src={props.imageUrl} alt="apartment_image" />
       </div>
       <div className="apartment_title">{props.title}</div>
     </Link>

@@ -2,6 +2,8 @@
 .apartement_image{
     position: relative;
     margin-bottom: 2rem;
+    height: 400px;
+   
     .btn {
         position: absolute;
         top: 0;
@@ -21,12 +23,24 @@
         }
       }
     img{
-        height: 200px;
+        height:100%;
         width: 100%;
         object-fit: cover;
         border-radius: 20px;
         margin-bottom: 1rem;
         
     }
+    .conteur{
+      position: absolute;
+      bottom: 20px;
+      right: 50%;
+      color:white;
+      font-weight: 700;
+      font-size: 14px;
+      @media screen and (width<=768px){
+        display: none;
+      }
+    }
+
 
 }

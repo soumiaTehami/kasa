@@ -32,7 +32,7 @@ export function Rating(props) {
           {etoile.map((etoileValue) => (
             <span
               key={etoileValue}
-              className={logement.rating >= etoileValue ? "on" : ""} //affiché les etoile class "on" .
+              className={logement.rating >= etoileValue ? "on" : ""} //affiché les etoile class "on" si non etoile reste gris.
             >
               ★
             </span>

@@ -13,8 +13,8 @@ function ApartementPage() {
     fetch("../logements.json")
       .then((response) => response.json())
       .then((data) => {
-        const logement = data.find((element) => element.id === id);
-        setLogement(logement);
+         
+        setLogement(data.find((element) => element.id === id));
       })
       .catch((error) => {
         console.error("Erreur lors de la récupération du logement : ", error);
@@ -28,7 +28,7 @@ function ApartementPage() {
   return (
     <div>
       <div className="apartement-page">
-        <Slider imageUrl={logement.cover} />
+        <Slider pictures={logement.pictures} />
         <div>
           <Rating logement={logement} />
 
