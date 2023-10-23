@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import "./collaps.scss";
 
 export function Collaps(props) {
-  const [ContentVisible, setContentVisible] = useState(false);//défini le collapse par défaut fermé
+  // État local pour suivre si le collaps est ouvert ou fermé
+  const [ContentVisible, setContentVisible] = useState(false);
 
+  // Fonction pour inverser l'état du collaps quand le titre est cliqué
   const Contentchevron = () => {
-    setContentVisible(!ContentVisible);//inversé la valeur actuale
+    setContentVisible(!ContentVisible);
   };
 
+  // Classe CSS pour l'icône de la flèche, basée sur l'état actuel du collaps
   const chevronClass =
     (ContentVisible ? "fa-chevron-up" : "fa-chevron-down") + " fas";
 
@@ -15,12 +18,17 @@ export function Collaps(props) {
     <>
       <div className="apartement-description">
         <p className="description-title" onClick={Contentchevron}>
+          {/* Le titre est passé en tant que prop */}
           <span>{props.title}</span>
+          {/* Affiche l'icône en fonction de l'état du collaps */}
           <i className={chevronClass}></i>
         </p>
-      {ContentVisible && <p className="description-content">
-          {props.content}
-        </p>}  
+        {/* Affiche le contenu seulement si le collaps est ouvert (ContentVisible est true) */}
+        {ContentVisible && (
+          <p className="description-content">
+            {props.content}
+          </p>
+        )} 
       </div>
     </>
   );

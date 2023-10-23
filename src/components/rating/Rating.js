@@ -1,11 +1,11 @@
 import React from "react";
 import "./Rating.scss";
-
+// Composant Rating qui prend des propriétés, notamment "logement"
 export function Rating(props) {
-  const { logement } = props;
-  const { name } = logement.host;
+  const { logement } = props;    // Destructuration des propriétés pour extraire logement
+  const { name } = logement.host;   // Destructuration du nom 
   const [firstName, lastName] = name.split(" ");
-  const etoile = [1, 2, 3, 4, 5]; // Créez un tableau pour les étoiles
+  const etoile = [1, 2, 3, 4, 5];   // Créez un tableau d'étoiles de 1 à 5
 
   return (
     <div className="apartement-header">

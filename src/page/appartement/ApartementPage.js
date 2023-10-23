@@ -6,33 +6,44 @@ import { Slider } from "../../components/slider/slider";
 import { Rating } from "../../components/rating/Rating";
 
 function ApartementPage() {
+  // Utilisation de useParams pour obtenir l'ID du logement à afficher depuis l'URL
   const { id } = useParams();
+
+  // Utilisation du state pour stocker les données du logement
   const [logement, setLogement] = useState(null);
 
+  // Utilisation de useEffect pour effectuer une requête de données lorsque l'ID change
   useEffect(() => {
     fetch("../logements.json")
       .then((response) => response.json())
       .then((data) => {
-         
-        setLogement(data.find((element) => element.id === id));
+        // Recherchez le logement correspondant dans les données en utilisant l'ID
+        const logement = data.find((element) => element.id === id);
+        setLogement(logement);
       })
       .catch((error) => {
         console.error("Erreur lors de la récupération du logement : ", error);
       });
   }, [id]);
 
+  // Si le logement est en cours de chargement, affichez "Loading..."
   if (logement === null) {
     return <div>Loading...</div>;
   }
 
+  // Si le logement a été récupéré, affichez les détails de la page d'appartement
   return (
     <div>
       <div className="apartement-page">
+        {/* Utilisation du composant Slider pour afficher les images du logement */}
         <Slider pictures={logement.pictures} />
+
         <div>
+          {/* Utilisation du composant Rating pour afficher les détails du logement  */}
           <Rating logement={logement} />
 
           <div className="apartement_description">
+            {/* Utilisation du composant Collaps pour afficher la description du logement et ses équipements */}
             <Collaps title="Description" content={logement.description} />
             <Collaps
               title="Equipements"
