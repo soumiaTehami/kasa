@@ -18,17 +18,14 @@ export function Collaps(props) {
     <>
       <div className="apartement-description">
         <p className="description-title" onClick={Contentchevron}>
-          {/* Le titre est passé en tant que prop */}
           <span>{props.title}</span>
-          {/* Affiche l'icône en fonction de l'état du collaps */}
+
           <i className={chevronClass}></i>
         </p>
         {/* Affiche le contenu seulement si le collaps est ouvert (ContentVisible est true) */}
         {ContentVisible && (
-          <p className="description-content">
-            {props.content}
-          </p>
-        )} 
+          <p className="description-content">{props.content}</p>
+        )}
       </div>
     </>
   );

@@ -11,10 +11,9 @@ function HomePage() {
   // Utilisation de useEffect pour effectuer une opération asynchrone lors du montage du composant
   useEffect(FetchApartements, []); // Le tableau de dépendances est vide, donc cela s'exécutera une fois après le montage initial
 
-  // Fonction pour récupérer la liste des appartements depuis un fichier JSON
   function FetchApartements() {
     fetch("logements.json")
-      .then((res) => res.json()) // Convertit la réponse en JSON
+      .then((res) => res.json())
       .then((res) => setApartments(res)) // Met à jour l'état local avec les données des appartements
       .catch(console.error); // Gère les erreurs en les affichant dans la console
   }
