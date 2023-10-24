@@ -20,6 +20,7 @@ body{
 }
  @media screen and (width<=768px){
     .grid{
+        flex-direction: column;
         justify-content: center;
         background-color: transparent;
         padding: 0;
