@@ -30,7 +30,7 @@ function About() {
       <Banner />
       <div className="about-container">
         {dataAbout.map((element) => (
-          <Collaps title={element.title} content={element.content} />
+          <Collaps  key={element.title} title={element.title} content={element.content} />
         ))}
       </div>
     </>

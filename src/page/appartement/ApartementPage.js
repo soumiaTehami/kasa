@@ -35,15 +35,12 @@ function ApartementPage() {
   return (
     <div>
       <div className="apartement-page">
-        {/* Utilisation du composant Slider pour afficher les images du logement */}
         <Slider pictures={logement.pictures} />
 
         <div>
-          {/* Utilisation du composant Rating pour afficher les détails du logement  */}
           <Rating logement={logement} />
 
           <div className="apartement_description">
-            {/* Utilisation du composant Collaps pour afficher la description du logement et ses équipements */}
             <Collaps title="Description" content={logement.description} />
             <Collaps
               title="Equipements"

@@ -12,7 +12,7 @@ export function Collaps(props) {
 
   // Classe CSS pour l'icône de la flèche, basée sur l'état actuel du collaps
   const chevronClass =
-    (ContentVisible ? "fa-chevron-up" : "fa-chevron-down") + " fas";
+    (ContentVisible ? "fa-chevron-down": "fa-chevron-up") + " fas";
 
   return (
     <>
