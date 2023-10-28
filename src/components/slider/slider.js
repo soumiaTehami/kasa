@@ -30,12 +30,12 @@ export function Slider({ pictures }) {
         <>
           {/* Bouton pour passer à l'image précédente */}
           <button className="btn btn-précédent">
-            <i className="fas fa-chevron-left" onClick={handlePrevious}></i>
+            <i className="fa-solid fa-chevron-left" onClick={handlePrevious}></i>
           </button>
 
           {/* Bouton pour passer à l'image suivante */}
           <button className="btn btn-suivant">
-            <i className="fas fa-chevron-right" onClick={handleNext}></i>
+            <i className="fa-solid fa-chevron-right" onClick={handleNext}></i>
           </button>
 
           {/* Affichez le numéro de l'image actuelle par rapport au nombre total d'images */}

@@ -1,47 +1,46 @@
-@use "../../scss/variable.scss" as*;
-.apartement-description{
-    flex: 1;
-    overflow: hidden;
-    margin-bottom: 1rem;
+@use "../../scss/variable.scss" as *;
+.apartement-description {
+  flex: 1;
+  overflow: hidden;
+  margin-bottom: 1rem;
 
-    p{
-        margin-block: 0;
-    }
-    
-    .description-title{
-        background-color:  $color-primry;
-        color:   $color-tertairy;
-        padding: 0.7rem ;
-        border-radius: 0.7rem;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        i{
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-    }
-    .description-content{
-        
-        background-color:  $color-gray;
-        color:$color-primry ;
-        
-        padding: 1rem;
-        border-radius:0.7rem;
-        position: relative;
-        top:-0.3rem;
-        z-index: -1;
-        animation: slide-in 0.3s ease-in-out;
-        
+  p {
+    margin-block: 0;
+  }
 
+  .description-title {
+    background-color: $color-primry;
+    color: $color-tertairy;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
     }
-}
-@keyframes slide-in{
-    0% {
-        transform: translateY(-100%);
+  }
+  .description-content {
+    background-color: $color-gray;
+    color: $color-primry;
+
+    padding: 1rem;
+    border-radius: 0.7rem;
+    position: relative;
+    top: -0.3rem;
+    z-index: -1;
+    animation: slide-in 0.3s ease-in-out;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
       }
-    100% {
-        transform: translateY(0);
+      100% {
+        opacity: 1;
       }
+  }
+  }
 }
