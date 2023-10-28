@@ -23,7 +23,8 @@
   }
 
   .apartment_image {
-    height: 100%;
+    height: 250px;
+    width: 100%;
   }
 
   @media screen and (max-width: 768px) { // Utilisez "max-width" au lieu de "width<=768px"

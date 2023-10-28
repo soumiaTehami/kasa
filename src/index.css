@@ -1,10 +1,13 @@
 .main {
-  padding-inline: 30px ;
-    margin-bottom: 30px;
-   min-height: 80vh; /* Occupe au moins toute la hauteur de la fenêtre */
+  padding-inline: 30px;
+  margin-bottom: 30px;
+  min-height: 80vh;
+  margin: auto;
   display: flex;
-    flex-direction: column;
-    @media screen and (width<=768px){
-        padding:1rem;
-        }
+  flex-direction: column;
+  max-width: 1440px;
+
+  @media screen and (width<=768px) {
+    padding: 1rem;
+  }
 }

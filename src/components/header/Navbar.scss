@@ -6,6 +6,8 @@
     color: $color-primry;
     font-weight: 700; 
     gap: 30px; 
+    max-width: 1440px;
+    margin: auto;
     @media screen and (width<=768px){
         text-transform:uppercase;
         font-weight: 400;
