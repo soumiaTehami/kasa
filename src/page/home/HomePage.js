@@ -5,10 +5,7 @@ import CarteAppartement from "../../components/carteAppartement/CarteAppartment"
 import "./HomePage.scss";
 
 function HomePage() {
-  // Utilisation de l'état local pour stocker la liste des appartements
   const [apartments, setApartments] = useState([]);
-
-  // Utilisation de useEffect pour effectuer une opération asynchrone lors du montage du composant
   useEffect(FetchApartements, []); // Le tableau de dépendances est vide, donc cela s'exécutera une fois après le montage initial
 
   function FetchApartements() {

@@ -25,7 +25,7 @@ export function Rating(props) {
             <span>{lastName}</span>
           </h3>
           <div className="apartement_badge">
-            <img src={logement.host.picture} alt="" />
+            <img src={logement.host.picture} alt="image_apartement" />
           </div>
         </div>
         <div className="apartement-star">

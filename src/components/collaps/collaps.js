@@ -3,16 +3,16 @@ import "./collaps.scss";
 
 export function Collaps(props) {
   // État local pour suivre si le collaps est ouvert ou fermé
-  const [ContentVisible, setContentVisible] = useState(false);
+  const [ContenuVisible, setContenuVisible] = useState(false);
 
   // Fonction pour inverser l'état du collaps quand le titre est cliqué
   const Contentchevron = () => {
-    setContentVisible(!ContentVisible);
+    setContenuVisible(!ContenuVisible);
   };
 
   // Classe CSS pour l'icône de la flèche, basée sur l'état actuel du collaps
   const chevronClass =
-    (ContentVisible ? "fa-chevron-down": "fa-chevron-up") + " fas";
+    (ContenuVisible? "fa-chevron-down": "fa-chevron-up") + " fas";
 
   return (
     <>
@@ -23,7 +23,7 @@ export function Collaps(props) {
           <i className={chevronClass}></i>
         </p>
         {/* Affiche le contenu seulement si le collaps est ouvert (ContentVisible est true) */}
-        {ContentVisible && (
+        {ContenuVisible && (
           <p className="description-content">{props.content}</p>
         )}
       </div>
