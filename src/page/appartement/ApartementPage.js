@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "./ApartementPage.scss";
 import { Collaps } from "../../components/collaps/collaps.js";
 import { Slider } from "../../components/slider/slider";
-import { Rating } from "../../components/rating/Rating";
+import { Housing} from "../../components/Housing/Housing";
 
 function ApartementPage() {
   // Utilisation de useParams pour obtenir l'ID du logement à afficher depuis l'URL
@@ -38,7 +38,7 @@ function ApartementPage() {
         <Slider pictures={logement.pictures} />
 
         <div>
-          <Rating logement={logement} />
+          <Housing logement={logement} />
 
           <div className="apartement_description">
             <Collaps title="Description" content={logement.description} />

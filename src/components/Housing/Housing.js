@@ -1,7 +1,7 @@
 import React from "react";
-import "./Rating.scss";
+import "./Housing.scss";
 // Composant Rating qui prend des propriétés, notamment "logement"
-export function Rating(props) {
+export function Housing(props) {
   const { logement } = props;    // Destructuration des propriétés pour extraire logement
   const { name } = logement.host;   // Destructuration du nom 
   const [firstName, lastName] = name.split(" ");
