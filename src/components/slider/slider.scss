@@ -3,6 +3,7 @@
     position: relative;
     margin-bottom: 2rem;
     height: 400px;
+    margin-top: 25px;
    
     .btn {
         position: absolute;
@@ -35,8 +36,12 @@
       bottom: 20px;
       right: 50%;
       color:$color-tertairy;
-      font-weight: 600;
-      font-size: 30px;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 25.67px;
+      text-align: center;
+
       @media screen and (width<=768px){
         display: none;
       }
