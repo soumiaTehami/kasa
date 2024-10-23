@@ -1,4 +1,5 @@
 @use "../../scss/variable.scss" as *;
+
 .apartement-description {
   flex: 1;
   overflow: hidden;
@@ -6,6 +7,23 @@
 
   p {
     margin-block: 0;
+  }
+
+  // Animation de rotation pour l'icône (i)
+  i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    // Ajout d'une animation de rotation à l'ouverture
+    &.rotate-up {
+      transform: rotate(180deg);
+    }
+
+    // Animation inverse à la fermeture
+    &.rotate-down {
+      transform: rotate(0deg);
+    }
   }
 
   .description-title {
@@ -16,28 +34,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    i {
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
   }
+
   .description-content {
-    background-color:rgba(246, 246, 246, 0.45);
-    ;
+    background-color: rgba(246, 246, 246, 0.45);
     color: black;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 25.67px;
-    
     padding: 1rem;
     border-radius: 0.7rem;
     position: relative;
     top: -0.3rem;
     z-index: -1;
-    animation: slide-in 0.3s ease-in-out;
-    animation-name: fade-in;
-    animation-duration: 0.5s;
+
+    // Ajout d'une animation glissante et de fondu pour le contenu
+    animation: slide-in 0.3s ease-in-out, fade-in 0.5s ease-in-out;
+
+    @keyframes slide-in {
+      0% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
 
     @keyframes fade-in {
       0% {
@@ -46,6 +68,6 @@
       100% {
         opacity: 1;
       }
-  }
+    }
   }
 }

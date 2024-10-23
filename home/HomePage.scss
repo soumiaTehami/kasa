@@ -1,0 +1,29 @@
+@use "../../scss/variable.scss" as*;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+.grid{
+    background-color:$color-background;
+    min-height: 50vh;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    padding: 10px;
+    justify-content: space-between;
+    
+    
+}
+ @media screen and (width<=768px){
+    .grid{
+        flex-direction: column;
+        justify-content: center;
+        background-color: transparent;
+        padding: 0;
+    }
+        
+    }

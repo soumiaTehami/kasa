@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import "./ApartementPage.scss";
 import { Collaps } from "../../components/collaps/collaps.js";
 import { Slider } from "../../components/slider/slider";
-import { Housing} from "../../components/Housing/Housing";
+import { Housing } from "../../components/Housing/Housing";
+import ErrorPage from "../../page/notFound/ErrorPage";
 
 function ApartementPage() {
   // Utilisation de useParams pour obtenir l'ID du logement à afficher depuis l'URL
@@ -29,6 +30,11 @@ function ApartementPage() {
   // Si le logement est en cours de chargement, affichez "Loading..."
   if (logement === null) {
     return <div>Loading...</div>;
+  }
+
+  // Vérifiez que les données essentielles existent avant de les utiliser
+  if (!logement || !logement.pictures || !logement.description || !logement.equipments) {
+    return  <ErrorPage />;
   }
 
   // Si le logement a été récupéré, affichez les détails de la page d'appartement
