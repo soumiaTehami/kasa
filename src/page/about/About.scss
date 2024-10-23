@@ -1,5 +1,12 @@
 .about-container{
-
+    padding-inline: 50px;
     overflow: hidden;
 
+}
+@media screen and (width <= 768px) {
+    .about-container{
+        padding-inline:0px;
+        overflow: hidden;
+    
+    }
 }
